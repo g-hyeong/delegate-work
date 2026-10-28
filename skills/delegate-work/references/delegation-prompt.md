@@ -17,6 +17,8 @@ Scope and ownership:
 - Read/write: [read-only, or exact files/areas you own]
 - Coordination: [dependencies and sole owner of each shared file]
   Preserve other workers' changes; do not revert, stage, or commit them.
+- Git: [whether commits are authorized, sole Git writer, applicable commit
+  conventions and checks; do not narrow the permitted types without a reason]
 - External actions: [authorized reads or changes; report any new permission needed]
 - Further delegation: none unless explicitly allowed within [scope and limit].
 

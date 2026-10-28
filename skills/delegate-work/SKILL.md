@@ -32,6 +32,7 @@ Use the relevant parts of the [handoff template](references/delegation-prompt.md
 
 - Leave implementation choices open while preserving fixed facts, wording, interfaces, and external-action limits.
 - Assign one writer to each shared file or area. Do not let workers revert, clean up, stage, or commit another worker's changes. Use an isolated checkout only when the work needs it; isolation does not eliminate integration conflicts.
+- Pass commit authority, the Git writer, and applicable user or project commit conventions to implementation workers. Preserve the host's language, type, scope, breaking-change, and integration rules rather than imposing a fixed type list. A convention grants no permission to commit; serialize staging and commits within a shared working tree.
 - Do not authorize recursive delegation by default. Allow a bounded depth and scope only when independent work and capacity justify it.
 - Give independent reviewers the original requirements and actual artifacts. Do not frame the implementer's claim of success or your preferred conclusion as the answer.
 
