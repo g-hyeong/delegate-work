@@ -1,10 +1,10 @@
 ---
 name: delegate-work
-description: Delegate independent research, implementation, transformation, and verification to subagents, or hand off one substantial bounded task. Use when coordinating multiple workstreams, parallel investigation, or a focused handoff would help. Choose models and reasoning settings from the current runtime. Keep trivial or tightly coupled work local.
+description: Coordinate parallel subagents and multi-agent workflows through bounded task delegation. Use for parallel research, coding, review, independent investigations, or a focused whole-task handoff. Split work, isolate context, prevent file conflicts, and verify results using the models and reasoning settings available in the current runtime. Keep trivial or tightly coupled work local.
 license: MIT
 ---
 
-# Delegate Work
+# Delegate Work: Parallel Subagent Orchestration
 
 Keep the parent focused on the user's goal, communication, and integration. Give workers bounded outcomes they can complete independently. Delegation stays within existing authorization; it does not grant new permissions.
 

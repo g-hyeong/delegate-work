@@ -1,10 +1,10 @@
 # Delegate Work
 
-An Agent Skill for deciding **what to delegate, what to keep local, and how to verify the result**.
+**Parallel subagent orchestration and task delegation for AI coding agents.** Split independent research, coding, and review across workers, prevent file conflicts, and verify results using the models and reasoning settings available in your runtime.
 
 [한국어](README.ko.md) · [skills.sh](https://skills.sh/g-hyeong/delegate-work/delegate-work) · [Skill instructions](skills/delegate-work/SKILL.md) · [Worked examples](skills/delegate-work/references/examples.md) · [Validation](evals/VALIDATION.md)
 
-Use independent workers when they help. Keep small or tightly coupled work local. Choose models and reasoning settings from the current runtime instead of maintaining a hardcoded model table.
+Use it to coordinate multi-agent workflows, parallel investigations, or a focused whole-task handoff. Keep small or tightly coupled work local. Model and reasoning choices adapt to the current runtime instead of a hardcoded model table.
 
 ## Install
 

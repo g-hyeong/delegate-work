@@ -1,5 +1,5 @@
 interface:
   display_name: "Delegate Work"
-  short_description: "Delegate bounded work with adaptive runtime settings"
+  short_description: "Parallel subagents, task delegation, and result review"
 policy:
   allow_implicit_invocation: true
