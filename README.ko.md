@@ -2,7 +2,7 @@
 
 **어떤 일을 위임하고, 무엇을 직접 처리하며, 결과를 어떻게 검증할지** 판단하는 에이전트 스킬입니다.
 
-[English](README.md) · [스킬 본문](skills/delegate-work/SKILL.md) · [구체적인 예시](skills/delegate-work/references/examples.md) · [검증 기록](evals/VALIDATION.md)
+[English](README.md) · [skills.sh](https://skills.sh/g-hyeong/delegate-work/delegate-work) · [스킬 본문](skills/delegate-work/SKILL.md) · [구체적인 예시](skills/delegate-work/references/examples.md) · [검증 기록](evals/VALIDATION.md)
 
 독립적인 작업은 나누고, 작거나 서로 얽힌 작업은 직접 처리합니다. 모델 이름과 사고 수준을 고정하지 않고 현재 실행 환경이 실제로 제공하는 선택지에 맞춥니다.
 

@@ -2,7 +2,7 @@
 
 An Agent Skill for deciding **what to delegate, what to keep local, and how to verify the result**.
 
-[한국어](README.ko.md) · [Skill instructions](skills/delegate-work/SKILL.md) · [Worked examples](skills/delegate-work/references/examples.md) · [Validation](evals/VALIDATION.md)
+[한국어](README.ko.md) · [skills.sh](https://skills.sh/g-hyeong/delegate-work/delegate-work) · [Skill instructions](skills/delegate-work/SKILL.md) · [Worked examples](skills/delegate-work/references/examples.md) · [Validation](evals/VALIDATION.md)
 
 Use independent workers when they help. Keep small or tightly coupled work local. Choose models and reasoning settings from the current runtime instead of maintaining a hardcoded model table.
 

@@ -33,4 +33,18 @@ These are eight single-run simulated decision checks, not a controlled benchmark
 
 ## Installation and cross-host execution
 
-Remote installation verification is pending publication. No live multi-agent session in Claude Code has been tested. The optional host metadata and portable instructions do not establish cross-host behavioral equivalence.
+A single project-local installation from the public GitHub repository succeeded using Node.js 22.22.0 and the Skills CLI 1.7.4:
+
+```bash
+npx --yes skills@1.7.4 add g-hyeong/delegate-work --skill delegate-work -a codex -a claude-code -y
+```
+
+The test ran in a disposable directory, without `-g`. All six installed files matched the repository skill subtree byte for byte, including the license. The Codex skill directory was present, and the Claude Code skill symlink resolved to it. The existing personal installation was not replaced.
+
+This verifies installer behavior and package integrity, not live task execution in either newly installed host. No live multi-agent session in Claude Code has been tested. The optional host metadata and portable instructions do not establish cross-host behavioral equivalence.
+
+## Directory visibility
+
+The [skills.sh detail page](https://skills.sh/g-hyeong/delegate-work/delegate-work) returned HTTP 200 and displayed the correct repository, installation command, and published SKILL.md content. At the check, it showed First Seen as Today and the install count as a dash. The public search query scoped to the owner returned no result yet. Detail-page availability is confirmed; search indexing and a numeric install count are not claimed.
+
+No synthetic repeated installations were performed to increase metrics. Existing telemetry opt-out settings were checked and preserved; neither opt-out variable was enabled for this installation.
