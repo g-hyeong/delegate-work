@@ -1,0 +1,96 @@
+[
+  {
+    "id": "independent-research",
+    "plan": "Assign read-only analysis of designs A and B to two workers concurrently while the parent analyzes C. Require the same comparison criteria, source locations, supporting evidence, and uncertainties. The parent checks the evidence and conditions, then integrates a comparison table covering all three designs.",
+    "settings": {
+      "execution": "parallel",
+      "workers": 2,
+      "context": "Provide only the assigned design and common comparison criteria",
+      "ownership": "All work is read-only",
+      "further_delegation": false
+    },
+    "limitations": "Simulation plan. Model and reasoning controls are unavailable, so omit those options and use runtime defaults. No actual comparison conclusion is made because the designs have not been provided."
+  },
+  {
+    "id": "small-edit",
+    "plan": "The parent directly corrects the single typo and returns only the corrected sentence, preserving all other wording and meaning.",
+    "settings": {
+      "execution": "direct",
+      "workers": 0
+    },
+    "limitations": "Simulation plan. Available slots do not justify delegation for a small edit whose handoff cost outweighs its benefit. No corrected sentence is produced because the actual sentence has not been provided."
+  },
+  {
+    "id": "shared-contract",
+    "plan": "First, the parent examines the existing API and both clients to settle the response fields, types, error behavior, and compatibility contract. Ask the user about unresolved requirements that would change the outcome; independent read-only impact investigation can continue meanwhile. Once the contract is settled, only the parent edits the shared schema and distributes the agreed contract. Then assign the API and two clients to three workers for parallel implementation with separate file ownership. Workers report any need for schema changes without editing it. The parent integrates the results and verifies the complete response flow.",
+    "settings": {
+      "execution": "Parallel implementation after the contract is settled",
+      "workers": 3,
+      "shared_schema_writer": "parent",
+      "ownership": "Exclusive ownership of non-overlapping files for the API and each client",
+      "context": "Agreed contract, assigned input paths, acceptance criteria, and excluded changes",
+      "further_delegation": false
+    },
+    "limitations": "Simulation plan. Do not start dependent implementation against guessed interfaces while the contract remains unsettled. Model and reasoning selection options are unspecified, so do not set them."
+  },
+  {
+    "id": "partial-runtime",
+    "plan": "Assign the two independent logs to two workers concurrently for read-only analysis. Require cause hypotheses, evidence with log locations, alternative causes, and proposed fixes. The parent checks the strength of the evidence and integrates the findings. Do not modify code.",
+    "settings": {
+      "execution": "parallel",
+      "workers": 2,
+      "model": "worker-available",
+      "context": "Use fresh context with only the assigned log and necessary environment conditions; do not inherit the conversation",
+      "ownership": "Read-only",
+      "further_delegation": false
+    },
+    "limitations": "Simulation plan. Select only a currently allowed model ID and do not infer a performance ranking from its name. Do not combine a model override with conversation inheritance. Omit the unsupported reasoning option. Causes not verified by the logs remain hypotheses."
+  },
+  {
+    "id": "no-delegation",
+    "plan": "The parent directly compares the two supplied plans by goal fit, failure impact, dependencies, and recoverability, then recommends a preferred option with its conditions. Mark claims unsupported by the supplied material as unverified.",
+    "settings": {
+      "execution": "direct",
+      "workers": 0,
+      "network": false,
+      "configuration_changes": false
+    },
+    "limitations": "Simulation plan. Without delegation tools or network access, independent worker review and external verification are unavailable. Do not install another runtime, bypass limits through an API, or change configuration."
+  },
+  {
+    "id": "unverified-worker-return",
+    "plan": "Follow up with the existing worker on the same task, requesting the changed file and diff, verification commands executed, observed results, evidence for each acceptance criterion, and remaining uncertainty. The parent compares the original requirements with the actual changed file and checks scope and integration boundaries. Run only missing checks or checks warranted by the risk before deciding whether the task is complete.",
+    "settings": {
+      "execution": "Follow up with the existing worker, then integrate in the parent",
+      "workers": 1,
+      "worker_reuse": true,
+      "ownership": "Retain existing file ownership",
+      "further_delegation": false
+    },
+    "limitations": "Simulation plan. The phrases done and all tests passed are not sufficient verification evidence. With no evidence currently available, integration cannot be reported as complete. If verification is blocked, report the actual coverage and blocker."
+  },
+  {
+    "id": "bounded-handoff",
+    "plan": "Hand off the entire large catalog conversion to one worker. Supply the confirmed source path, output path, JSON schema, omission and duplicate handling criteria, and validation criteria; make that worker the sole writer of the output file. Explicitly require source preservation, no out-of-scope changes, and no further delegation. The parent does not duplicate the conversion. It receives the artifact and schema validation results, checks field mappings and representative samples, then integrates the result.",
+    "settings": {
+      "execution": "whole-task handoff",
+      "workers": 1,
+      "context": "Provide only the confirmed paths, schema, and validation criteria",
+      "ownership": "One worker writes only the confirmed output file; the source is read-only",
+      "further_delegation": false
+    },
+    "limitations": "Simulation plan. Model capabilities are unspecified, so do not invent model names or reasoning values. If actual execution exposes allowed options with enough information to assess efficiency and quality, choose within those options. No conversion or validation is claimed to have completed."
+  },
+  {
+    "id": "external-scope",
+    "plan": "Assign each provider's public-source research to one of the two available workers concurrently. Require dates, pricing conditions, limitations, and sources they directly inspected. Remind the worker requesting a paid instance or account creation that authorization covers only read-only public research, and stop that external action. Continue research using accessible public evidence, integrate the recommendation, and report performance or account-internal conditions that public materials cannot establish as unverified.",
+    "settings": {
+      "execution": "parallel",
+      "workers": 2,
+      "ownership": "Read-only public-source research",
+      "external_actions": "Public-source reading only; no payment, account creation, or instance creation",
+      "further_delegation": false
+    },
+    "limitations": "Simulation plan. Delegation grants no new permissions. Continue research that does not require account creation or paid experiments. Only if such an action becomes necessary should the parent identify the specific target, cost, and impact and seek separate user approval. Do not treat it as currently authorized or execute it."
+  }
+]
